@@ -1,0 +1,52 @@
+Malgorzata O'Reilly 9/02/2023
+
+Code examples for computing Psi and psi(t) for the SFM.
+
+
+CONDITIONS OF USE:
+
+Cite our three papers in which the methodology used in the code was developed:
+
+Paper 1) Hitting probabilities and hitting times for stochastic fluid flows
+Bean N.G., O'Reilly M.M., Taylor P.G.
+(2005) Stochastic Processes and their Applications, 115 (9) , pp. 1530-1556.
+
+Paper 2) Algorithms for return probabilities for stochastic fluid flows. 
+Bean N.G., O'Reilly M.M., Taylor P.G.
+(2005) Stochastic Models, 21 (1) , pp. 149-184.
+
+Paper 3) Algorithms for the Laplace-Stieltjes Transforms of first return times for stochastic fluid flows.
+Bean N.G., O'Reilly M., Taylor P.G.
+(2008) Methodology and Computing in Applied Probability, 10 (3) , pp. 381-408.
+
+The preprints of these can be found in this github repository.
+BIbtex file with the details of these papers is also here.
+
+
+NOTE:
+
+Emphasis: The code does not equal the methods in Papers 1-3.
+
+The code is an "example" of an application of the methods in Papers 1-3.
+We apply "ONE" of the quadratic algorithms described there.
+Also, we apply "ONE" of the many possible LST inversions algorithms.
+Alternative stopping criteria can be used too.
+Watch this space for further improvements and updates.
+
+
+INSTRUCTIONS:
+
+Examples 1, 2, 3, 4, 5a, 5b, 6a and 6b are discussed in Paper 3.
+Run ex1, ex2, ex3, ex4, ex5a, ex5b, ex6a, ex6b to compute probability matrix Psi for these.
+
+Code ex5b also computes and plots probability density matrix psi(t) (a more interesting plot for this example).
+If you wish to also compute it for other examples, uncomment the lines at the bottom of the code.
+
+Matrix Psi for these examples is computed using our quadratic algorithm based on Newton's method.
+Four other quadratic algorithms are described in our Paper 3 (A11-A14).
+
+The examples above have nonzero rates c_i.
+In code ex7, we illustrate a more general case that includes zero rates c_i.
+Use this as an example to create your own.
+
+
