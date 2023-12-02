@@ -26,15 +26,10 @@ for u=1:size(s_mat,1)
         end
         % This is for an example with zero rates c_i.
         if s0>0
-            Q11=inv(C1)*(T11-ss*eye(s1)-T10*inv(T00-ss*eye(s0))*T01);
-            Q22=inv(-C2)*(T22-ss*eye(s2)-T20*inv(T00-ss*eye(s0))*T02);
-            Q12=inv(C1)*(T12-T10*inv(T00-ss*eye(s0))*T02);
-            Q21=inv(-C2)*(T21-T20*inv(T00-ss*eye(s0))*T01);
-            Q=[Q11,Q12;Q21,Q22];
-            Q11s=T11-ss*eye(s1);
-            Q22s=T22-ss*eye(s2);
-            Q12s=T12;
-            Q21s=T21;
+            Q11s=inv(C1)*(T11-ss*eye(s1)-T10*inv(T00-ss*eye(s0))*T01);
+            Q22s=inv(-C2)*(T22-ss*eye(s2)-T20*inv(T00-ss*eye(s0))*T02);
+            Q12s=inv(C1)*(T12-T10*inv(T00-ss*eye(s0))*T02);
+            Q21s=inv(-C2)*(T21-T20*inv(T00-ss*eye(s0))*T01);
         end
         
         [psin, iterationsN]=A4_getLSTPsis(Q11s,Q12s,Q21s,Q22s);
