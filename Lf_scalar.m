@@ -19,10 +19,10 @@ for u=1:size(s_mat,1)
         
         % This is for an example with nonzero rates c_i.
         if s0==0
-            Q11s=T11-ss*eye(s1);
-            Q22s=T22-ss*eye(s2);
-            Q12s=T12;
-            Q21s=T21;
+            Q11s=inv(C1)*(T11-ss*eye(s1));
+            Q22s=inv(-C2)*(T22-ss*eye(s2));
+            Q12s=inv(C1)*(T12);
+            Q21s=inv(-C2)*(T21);
         end
         % This is for an example with zero rates c_i.
         if s0>0
