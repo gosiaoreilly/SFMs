@@ -34,8 +34,6 @@ if errorN>1
         B=Q22+Q21*psin;
         C=-Q12+psin*Q21*psin;
         psin=sylvester(A,B,C);
-        oldpsin=psin;
-        g=g+1;
         iterationsN=iterationsN+1;
         if mu>eps % (mu>0 approx, transient case)
             errorN=max(max(abs(psin-oldpsin)))*Neps; % Use if mu is > 0.
@@ -46,6 +44,8 @@ if errorN>1
         if errorN<=1
             g=max_iter;
         end
+        oldpsin=psin;
+        g=g+1;
     end
 end
 
