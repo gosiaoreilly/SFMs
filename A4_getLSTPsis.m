@@ -33,14 +33,14 @@ if errorN>1
         B=Q22+Q21*psin;
         C=-Q12+psin*Q21*psin;
         psin=sylvester(A,B,C);
-        oldpsin=psin;
-        g=g+1;
         iterationsN=iterationsN+1;
         errorN=max(max(abs(psin-oldpsin)))*Neps;
         % Stopping citerion.
         if errorN<=1
             g=max_iter;
         end
+        oldpsin=psin;
+        g=g+1;
     end
 end
 
